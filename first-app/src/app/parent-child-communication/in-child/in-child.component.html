@@ -1,0 +1,18 @@
+<h2>In child</h2>
+<table border="1" *ngIf="messaggiRicevuti.length > 0; else noMessaggi">
+    <tr>
+        <th>id</th>
+        <th>messaggio</th>
+        <th>operazione</th>
+    </tr>
+    <tr *ngFor="let messaggio of messaggiRicevuti; let i = index;">
+        <td>{{i + 1}}</td>
+        <td>{{messaggio}}</td>
+        <td><button (click)="eliminaMessaggio(i)">Elimina</button>
+            <button (click)="modificaMessaggio(i)">Modifica</button></td>
+    </tr>
+</table>
+
+<ng-template #noMessaggi>
+    <p>Non ci sono messaggi.</p>
+</ng-template>

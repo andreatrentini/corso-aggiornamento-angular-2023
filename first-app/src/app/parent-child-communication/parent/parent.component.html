@@ -1,0 +1,8 @@
+<h1>Parent</h1>
+<app-in-child [messaggiRicevuti]="messaggi" (avvisoModifica)="modificaMessaggio($event)"></app-in-child>
+<app-out-child (avvisoMessaggio)="aggiungiMessaggio($event)" [messaggioDaModificare]="messaggioDaModificare"></app-out-child> 
+
+<h3>Elenco nel parent</h3>
+<ul>
+    <li *ngFor="let messaggio of messaggi">{{messaggio}}</li>
+</ul>
