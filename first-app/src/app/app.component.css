@@ -1,0 +1,20 @@
+li {
+    display: inline-block;
+    margin: 5px;
+}
+
+li a {
+    text-decoration: none;
+    border-left: 10px solid white;
+    padding: 0px  5px;
+    color:gray;
+}
+
+li a:visited {
+ color: gray;
+}
+
+li a:hover {
+    border-left: 10px solid red;
+    color: red;
+}

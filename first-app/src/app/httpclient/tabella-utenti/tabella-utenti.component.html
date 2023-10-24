@@ -1,0 +1,15 @@
+<p><button (click)="caricaDati()">Carica i dati</button></p>
+<table *ngIf="utenti">
+    <tr>
+        <th>#</th>
+        <th>Nome</th>
+        <th>Cognome</th>
+        <th>Mail</th>
+    </tr>
+    <tr *ngFor="let utente of utenti">
+        <th>{{utente.id}}</th>
+        <td>{{utente.nome}}</td>
+        <td>{{utente.cognome}}</td>
+        <td>{{utente.email}}</td>
+    </tr>
+</table>
